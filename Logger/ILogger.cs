@@ -9,6 +9,6 @@ namespace Logger
 {
     public interface ILogger
     {
-          void WiteEventLog(string source, string log, string message, object[] extraParam = null);
+          void WiteLog(string source, string log, string message, object[] extraParam = null);
     }
 }

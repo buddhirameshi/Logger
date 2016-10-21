@@ -16,29 +16,29 @@ namespace Logger
    public class DBLogger :ILogger
     {
 
-        private static DBLogger oneLogger;
+        //private static DBLogger oneLogger;
 
 
-        /// <summary>
-        /// private constructor helps to prevents the instantiation of the class
-        /// </summary>
-        private DBLogger()
-        {
-        }
+        ///// <summary>
+        ///// private constructor helps to prevents the instantiation of the class
+        ///// </summary>
+        //private DBLogger()
+        //{
+        //}
 
 
-        /// <summary>
-        /// Get Logger method will instantiate an object if there is no extsing instance
-        /// </summary>
-        /// <returns></returns>
-        public static ILogger GetLogger()
-        {
-            if (oneLogger == null)
-            {
-                oneLogger = new DBLogger();
-            }
-            return oneLogger;
-        }
+        ///// <summary>
+        ///// Get Logger method will instantiate an object if there is no extsing instance
+        ///// </summary>
+        ///// <returns></returns>
+        //public static ILogger GetLogger()
+        //{
+        //    if (oneLogger == null)
+        //    {
+        //        oneLogger = new DBLogger();
+        //    }
+        //    return oneLogger;
+        //}
 
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Logger
         /// <param name="log"></param>
         /// <param name="message"></param>
         /// <param name="extraParams"></param>
-        public void WiteEventLog(string source, string log, string message, object [] extraParams)
+        public void WiteLog(string source, string log, string message, object [] extraParams)
         {
 
             CommandType type = CommandType.Text; ////Set a default value to CommandType

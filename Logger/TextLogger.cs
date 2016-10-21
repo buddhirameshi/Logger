@@ -14,28 +14,28 @@ namespace Logger
     /// </summary>
     public class TextLogger : ILogger
     {
-        private static TextLogger oneLogger;
+        //private static TextLogger oneLogger;
 
         /// <summary>
         /// private constructor helps to prevents the instantiation of the class
         /// </summary>
-        private TextLogger()
-        {
+        //private TextLogger()
+        //{
 
-        }
+        //}
 
-        /// <summary>
-        /// Get Logger method will instantiate an object if there is no extsing instance
-        /// </summary>
-        /// <returns></returns>
-        public static ILogger GetLogger()
-        {
-            if (oneLogger == null)
-            {
-                oneLogger = new TextLogger();
-            }
-            return oneLogger;
-        }
+        ///// <summary>
+        ///// Get Logger method will instantiate an object if there is no extsing instance
+        ///// </summary>
+        ///// <returns></returns>
+        //public static ILogger GetLogger()
+        //{
+        //    if (oneLogger == null)
+        //    {
+        //        oneLogger = new TextLogger();
+        //    }
+        //    return oneLogger;
+        //}
 
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Logger
         /// <param name="logName"></param>
         /// <param name="message"></param>
         /// <param name="extraParams"></param>
-        public  void WiteEventLog(string source, string logName, string message,object [] extraParams=null)
+        public  void WiteLog(string source, string logName, string message,object [] extraParams=null)
         {
             string filePath = string.Format("{0}\\{1}", source, logName);
             using (StreamWriter sw = File.AppendText(filePath))

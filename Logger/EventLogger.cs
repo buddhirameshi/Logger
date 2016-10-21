@@ -14,28 +14,28 @@ namespace Logger
     /// </summary>
     public class EventLogger : ILogger
     {
-        private static EventLogger oneLogger;
+        //private static EventLogger oneLogger;
 
-        /// <summary>
-        /// private constructor helps to prevents the instantiation of the class
-        /// </summary>
-        private EventLogger()
-        {
+        ///// <summary>
+        ///// private constructor helps to prevents the instantiation of the class
+        ///// </summary>
+        //private EventLogger()
+        //{
           
-        }
+        //}
 
-        /// <summary>
-        /// Get Logger method will instantiate an object if there is no extsing instance
-        /// </summary>
-        /// <returns></returns>
-        public static ILogger GetLogger()
-        {
-            if (oneLogger == null)
-            {
-                oneLogger = new EventLogger();
-            }
-            return oneLogger;
-        }
+        ///// <summary>
+        ///// Get Logger method will instantiate an object if there is no extsing instance
+        ///// </summary>
+        ///// <returns></returns>
+        //public static ILogger GetLogger()
+        //{
+        //    if (oneLogger == null)
+        //    {
+        //        oneLogger = new EventLogger();
+        //    }
+        //    return oneLogger;
+        //}
 
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Logger
         /// <param name="log"></param>
         /// <param name="message"></param>
         /// <param name="extraParams"></param>
-        public void WiteEventLog(string source, string log, string message, object[] extraParams )
+        public void WiteLog(string source, string log, string message, object[] extraParams )
         {
             EventLogEntryType entryType = EventLogEntryType.Information; //Set a default value to EventLogEntryType
             try

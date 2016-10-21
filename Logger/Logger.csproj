@@ -43,7 +43,7 @@
     <Compile Include="DBLogger.cs" />
     <Compile Include="EventLogger.cs" />
     <Compile Include="ILogger.cs" />
-    <Compile Include="LoggerFactory.cs" />
+    <Compile Include="LogManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextLogger.cs" />
   </ItemGroup>
